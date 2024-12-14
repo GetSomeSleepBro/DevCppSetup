@@ -1,5 +1,5 @@
-![image](https://github.com/user-attachments/assets/40c56e89-2ec4-4598-a3cb-e5c1a6af3687)# MinGW
-MinGW installation on Windows using Ansible with graphics library setup
+# Dev c++ Setup w/ Graphics Libraries
+Dev c++ installation on Windows using Ansible with graphics library setup
 
 
 
