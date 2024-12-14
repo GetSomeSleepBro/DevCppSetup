@@ -22,6 +22,7 @@ Start-Process -FilePath $DevCppSetupPath -ArgumentList "/SILENT" -Wait
 
 # Clone the repository
 Write-Host "Cloning DevCppSetup repository..."
+$cloneDir = "$env:USERPROFILE\Desktop\DevCppSetup"
 git clone https://github.com/GetSomeSleepBro/DevCppSetup
 
 # Define file paths for copying
@@ -46,3 +47,9 @@ Copy-Item "$GraphicsLibsPath\ConsoleApp_cpp_graph.txt" "$DevCppTemplatesPath" -F
 
 # Confirm completion
 Write-Host "Setup completed successfully."
+
+
+# Remove the cloned repository
+Write-Host "Cleaning up by removing the cloned repository..."
+Remove-Item -Path $cloneDir -Recurse -Force
+Write-Host "Cloned repository removed."
