@@ -1,0 +1,15 @@
+{
+  "paths": {
+    "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\include": [
+      "graphics.h",
+      "winbgim.h"
+    ],
+    "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\lib": [
+      "libbgi.a"
+    ],
+    "C:\\Program Files (x86)\\Dev-Cpp\\Templates": [
+      "6-ConsoleAppGraphics.template",
+      "ConsoleApp_cpp_graph.txt"
+    ]
+  }
+}
