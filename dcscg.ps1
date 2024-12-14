@@ -1,9 +1,14 @@
 # Navigate to the Desktop
 Set-Location -Path "$env:USERPROFILE\Desktop"
 
-# Install Git using winget
-Write-Host "Installing Git..."
-winget install --id Git.Git -e --silent
+# Check if Git is installed
+Write-Host "Checking if Git is installed..."
+if (-Not (Get-Command git -ErrorAction SilentlyContinue)) {
+    Write-Host "Git is not installed. Installing Git..."
+    winget install --id Git.Git -e --silent
+} else {
+    Write-Host "Git is already installed."
+}
 
 # Download the Dev-C++ setup
 Write-Host "Downloading Dev-C++ setup..."
