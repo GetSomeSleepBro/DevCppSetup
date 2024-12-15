@@ -1,5 +1,24 @@
+# Function to check if running as Administrator
+Function Test-IsAdmin {
+    $isAdmin = (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+    return $isAdmin
+}
+
+# Check if running as Administrator
+if (-Not (Test-IsAdmin)) {
+    Write-Host "This script must be run as an Administrator. Exiting..." -ForegroundColor Red
+    exit
+}
+
 # Navigate to the Desktop
 Set-Location -Path "$env:USERPROFILE\Desktop"
+
+# Check if Dev-C++ is already installed
+$DevCppPath = "C:\Program Files (x86)\Dev-Cpp"
+if (Test-Path $DevCppPath) {
+    Write-Host "Dev-C++ is already installed at $DevCppPath. Exiting..." -ForegroundColor Green
+    exit
+}
 
 # Check if Git is installed
 Write-Host "Checking if Git is installed..."
