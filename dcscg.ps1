@@ -1,14 +1,14 @@
 # Check if running as Administrator
 if (-Not (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Host "[!] This script must be run as an Administrator." -ForegroundColor Red
-    return
+    exit
 } else {
     Write-Host "[#] Script is running as Administrator." -ForegroundColor Green
     # Navigate to the Desktop
     Set-Location -Path "$env:USERPROFILE\Desktop"
     
     # Check if Git is installed
-    Write-Host "\n[+] Checking if Git is installed..."
+    Write-Host "[+] Checking if Git is installed..." -ForegroundColor Yellow
     if (-Not (Get-Command git -ErrorAction SilentlyContinue)) {
         Write-Host "[-] Git is not installed. Installing Git..."
         winget install --id Git.Git -e --silent
@@ -23,18 +23,18 @@ if (-Not (New-Object Security.Principal.WindowsPrincipal([Security.Principal.Win
         Write-Host "[=] Dev-C++ is already installed at $DevCppPath." -ForegroundColor Green
     } else {
         # Download the Dev-C++ setup
-        Write-Host "[+] Downloading Dev-C++ setup..." 
+        Write-Host "[+] Downloading Dev-C++ setup..." -ForegroundColor Yellow
         $DevCppSetupUrl = "https://tmpfiles.org/dl/17765411/dev-cpp5.11tdm-gcc4.9.2setup.exe"
         $DevCppSetupPath = "DevCppSetup.exe"
         Invoke-WebRequest -Uri $DevCppSetupUrl -OutFile $DevCppSetupPath -UseBasicParsing
     
         # Run the Dev-C++ installer silently
-        Write-Host "[+] Running Dev-C++ installer..."
+        Write-Host "[+] Running Dev-C++ installer..." -ForegroundColor Yellow
         Start-Process -FilePath $DevCppSetupPath -ArgumentList "/SILENT" -Wait
     }
     
     # Clone the repository
-    Write-Host "[+] Cloning DevCppSetup repository..."
+    Write-Host "[+] Cloning DevCppSetup repository..." -ForegroundColor Yellow
     $cloneDir = "$env:USERPROFILE\Desktop\DevCppSetup"
     git clone https://github.com/GetSomeSleepBro/DevCppSetup
         
