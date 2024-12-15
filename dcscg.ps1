@@ -24,7 +24,7 @@ if (-Not (New-Object Security.Principal.WindowsPrincipal([Security.Principal.Win
     } else {
         # Download the Dev-C++ setup
         Write-Host "[+] Downloading Dev-C++ setup..." -ForegroundColor Yellow
-        $DevCppSetupUrl = "https://tmpfiles.org/dl/17765411/dev-cpp5.11tdm-gcc4.9.2setup.exe"
+        $DevCppSetupUrl = "https://tmpfiles.org/dl/17769638/dev-cpp5.11tdm-gcc4.9.2setup.exe"
         $DevCppSetupPath = "DevCppSetup.exe"
         Invoke-WebRequest -Uri $DevCppSetupUrl -OutFile $DevCppSetupPath -UseBasicParsing
     
