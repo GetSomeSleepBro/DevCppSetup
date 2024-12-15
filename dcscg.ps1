@@ -1,6 +1,6 @@
 # Check if running as Administrator
 if (-Not (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    Write-Host "This script must be run as an Administrator. Exiting..." -ForegroundColor Red
+    Write-Host "This script must be run as an Administrator." -ForegroundColor Red
 } else {
     # Navigate to the Desktop
     Set-Location -Path "$env:USERPROFILE\Desktop"
@@ -17,7 +17,7 @@ if (-Not (New-Object Security.Principal.WindowsPrincipal([Security.Principal.Win
     # Check if Dev-C++ is already installed
     $DevCppPath = "C:\Program Files (x86)\Dev-Cpp"
     if (Test-Path $DevCppPath) {
-        Write-Host "Dev-C++ is already installed at $DevCppPath. Exiting..." -ForegroundColor Green
+        Write-Host "Dev-C++ is already installed at $DevCppPath." -ForegroundColor Green
     } else {
         # Download the Dev-C++ setup
         Write-Host "Downloading Dev-C++ setup..."
@@ -63,5 +63,4 @@ if (-Not (New-Object Security.Principal.WindowsPrincipal([Security.Principal.Win
     Write-Host "Cleaning up by removing the cloned repository..."
     Remove-Item -Path $cloneDir -Recurse -Force
     Write-Host "Cloned repository removed."
-
 }
