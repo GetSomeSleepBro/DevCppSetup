@@ -16,6 +16,8 @@ OR
 Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/GetSomeSleepBro/DevCppSetup/refs/heads/main/dcscg.ps1").Content
 ```
 
+> The flags of the *Linker* options are copied to clipboard at the end of the script execution
+
 <br>
 
 ## II. Manual Configuration Steps
