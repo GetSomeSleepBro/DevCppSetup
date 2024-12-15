@@ -65,4 +65,8 @@ if (-Not (New-Object Security.Principal.WindowsPrincipal([Security.Principal.Win
     Write-Host "[+] Cleaning up by removing the cloned repository..." -ForegroundColor Yellow
     Remove-Item -Path $cloneDir -Recurse -Force
     Write-Host "[=] Cloned repository removed." -ForegroundColor Green
+
+    # Copying flgas for linker options to clipboard 
+    Write-Host "[+] Copied `-static-libgcc -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32` to clipboard" -ForegroundColor Green
+    "-static-libgcc -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32" | Set-Clipboard
 }
