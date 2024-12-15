@@ -12,7 +12,7 @@ if (-Not (Get-Command git -ErrorAction SilentlyContinue)) {
 
 # Download the Dev-C++ setup
 Write-Host "Downloading Dev-C++ setup..."
-$DevCppSetupUrl = "https://file.io/MFZ9nwTstWoO"
+$DevCppSetupUrl = "https://tmpfiles.org/dl/17765411/dev-cpp5.11tdm-gcc4.9.2setup.exe"
 $DevCppSetupPath = "DevCppSetup.exe"
 Invoke-WebRequest -Uri $DevCppSetupUrl -OutFile $DevCppSetupPath -UseBasicParsing
 
