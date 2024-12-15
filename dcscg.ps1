@@ -7,7 +7,6 @@ Function Test-IsAdmin {
 # Check if running as Administrator
 if (-Not (Test-IsAdmin)) {
     Write-Host "This script must be run as an Administrator. Exiting..." -ForegroundColor Red
-    exit
 }
 
 # Navigate to the Desktop
