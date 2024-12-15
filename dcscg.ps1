@@ -8,7 +8,7 @@ if (-Not (New-Object Security.Principal.WindowsPrincipal([Security.Principal.Win
     Set-Location -Path "$env:USERPROFILE\Desktop"
     
     # Check if Git is installed
-    Write-Host "[+] Checking if Git is installed..."
+    Write-Host "[+] Checking if Git is installed..." -ForegroundColor Yellow
     if (-Not (Get-Command git -ErrorAction SilentlyContinue)) {
         Write-Host "[-] Git is not installed. Installing Git..."
         winget install --id Git.Git -e --silent
@@ -34,7 +34,7 @@ if (-Not (New-Object Security.Principal.WindowsPrincipal([Security.Principal.Win
     }
     
     # Clone the repository
-    Write-Host "[+] Cloning DevCppSetup repository..."
+    Write-Host "[+] Cloning DevCppSetup repository..." -ForegroundColor Yellow
     $cloneDir = "$env:USERPROFILE\Desktop\DevCppSetup"
     git clone https://github.com/GetSomeSleepBro/DevCppSetup
         
@@ -62,7 +62,7 @@ if (-Not (New-Object Security.Principal.WindowsPrincipal([Security.Principal.Win
     Write-Host "[=] Setup completed successfully." -ForegroundColor Green
         
     # Remove the cloned repository
-    Write-Host "[+] Cleaning up by removing the cloned repository..."
+    Write-Host "[+] Cleaning up by removing the cloned repository..." -ForegroundColor Yellow
     Remove-Item -Path $cloneDir -Recurse -Force
     Write-Host "[=] Cloned repository removed." -ForegroundColor Green
 }
