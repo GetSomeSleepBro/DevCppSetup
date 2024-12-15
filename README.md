@@ -1,4 +1,4 @@
-# Dev c++ Setup w/ Graphics Libraries
+# Dev C++ Setup w/ Graphics Libraries
 Dev c++ installation on Windows using Ansible with graphics library setup
 
 #### One-command installation
