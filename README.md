@@ -33,8 +33,7 @@ Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Get
 
 ### 2. Configure Compiler Options
 
-- Navigate to:  
-  `Tools > Compiler Options`
+- Navigate to: `Tools > Compiler Options`
 
 ![Compiler Options Navigation](https://github.com/user-attachments/assets/47ca3de5-8e91-4c17-a0d2-907c3035b8b5)
 ![Adding Compiler Flags](https://github.com/user-attachments/assets/d073a197-5ad3-4b1f-9520-0d7f3e31e0eb)
