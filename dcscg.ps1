@@ -36,7 +36,7 @@ if (-Not (New-Object Security.Principal.WindowsPrincipal([Security.Principal.Win
     # Clone the repository
     Write-Host "[+] Cloning DevCppSetup repository..." -ForegroundColor Yellow
     $cloneDir = "$env:USERPROFILE\Desktop\DevCppSetup"
-    git clone https://github.com/GetSomeSleepBro/DevCppSetup
+    C:\"Program Files"\Git\bin\git.exe clone https://github.com/GetSomeSleepBro/DevCppSetup
         
     # Define file paths for copying
     $GraphicsLibsPath = "$env:USERPROFILE\Desktop\DevCppSetup\graphicslibs"
