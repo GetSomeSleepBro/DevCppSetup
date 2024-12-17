@@ -8,12 +8,12 @@ This guide explains how to set up **Dev-C++** on Windows using **Powershell Scri
 
 You can install and configure Dev-C++ with graphics support using a single PowerShell command (_run as Administrator_):
 
-a. Setup graphics libs
+a. **Setup graphics libs (dev cpp pre-installed)**
 ```powershell
 iex (iwr "https://raw.githubusercontent.com/GetSomeSleepBro/DevCppSetup/refs/heads/main/cg.ps1").Content
 ```
 
-b. Install `Dev C++` and setup graphics libs
+b. **Install `Dev C++` and setup graphics libs**
 ```powershell
 iex (iwr "https://raw.githubusercontent.com/GetSomeSleepBro/DevCppSetup/refs/heads/main/dcscg.ps1").Content
 ```
